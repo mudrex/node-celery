@@ -1,6 +1,6 @@
 {
-  "name": "node-celery",
-  "version": "0.2.8",
+  "name": "@mudrex/node-celery",
+  "version": "0.2.15",
   "description": "Celery client for Node",
   "author": "Mher Movsisyan <mher.movsisyan@gmail.com>",
   "scripts": {
@@ -19,5 +19,14 @@
     "mocha": "*"
   },
   "engine": "node >= 0.8.2",
-  "main": "celery.js"
+  "main": "celery.js",
+  "bugs": {
+    "url": "https://github.com/mher/node-celery/issues"
+  },
+  "homepage": "https://github.com/mher/node-celery#readme",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "license": "ISC"
 }

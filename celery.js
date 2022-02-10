@@ -282,12 +282,6 @@ function Task(client, name, options, exchange) {
     self.publish = function (args, kwargs, options, callback) {
         var id = options.id || uuid.v4();
 
-        var result = new Result(id, self.client);
-
-        if (client.conf.backend_type === 'redis') {
-            client.backend.results[result.taskid] = result;
-        }
-
         queue = options.queue || self.options.queue || queue || self.client.conf.DEFAULT_QUEUE;
         var msg = createMessage(self.name, args, kwargs, options, id);
         var pubOptions = {
@@ -301,7 +295,7 @@ function Task(client, name, options, exchange) {
             self.client.broker.publish(queue, msg, pubOptions, callback);
         }
 
-        return result;
+        return;
     };
 }
 
